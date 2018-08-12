@@ -9,18 +9,22 @@ public class CreatePickups2 : MonoBehaviour {
 	public GameObject objects;
 	public int maxObjects;
 	public bool deleteObjectOnPickup;
+	public int pickupBehaviour;
+	public GameObject replacements;
 
 	// Use this for initialization
 	void Start () {
-		CreateCube();
+		CreatePickup();
 		control = this;
 	}
 
-	void CreateCube() {
-		for(int i = 0; i < maxObjects; i++){
+	void CreatePickup() {
+		for (int i = 0; i < maxObjects; i++) {
 
-			spawnLocation = new Vector3(Random.Range(-9.0F, 9.0F), 0.5F, Random.Range(-9.0F,9.0F));
-			Instantiate(objects, spawnLocation, Quaternion.identity);
+			spawnLocation = new Vector3 (Random.Range (-9.0F, 9.0F), 0.5F, Random.Range (-9.0F, 9.0F));
+			Instantiate (objects, spawnLocation, Quaternion.identity);
 		}
+
 	}
+
 }
