@@ -10,7 +10,7 @@ public class CreatePickups2 : MonoBehaviour {
 	public int maxObjects;
 	public bool deleteObjectOnPickup;
 	public int pickupBehaviour;
-	public GameObject replacements;
+	public GameObject replacement;
 
 	// Use this for initialization
 	void Start () {
